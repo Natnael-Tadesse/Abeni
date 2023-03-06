@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V16</title>
+	<title>Login page</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -29,13 +29,13 @@
 </head>
 <body>
 	
-	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+	<div class="limiter" data-aos="fade-up-right">
+		<div class="container-login100" style="background-image: url('images/ab2.jpg');">
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
 					Account Login
 				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5" id="form" action="" method="GET">
+				<form class="login100-form validate-form p-b-33 p-t-5" id="form" action="" method="GET" >
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="username" id="username" placeholder="User name">
@@ -63,7 +63,12 @@
 	
 
 	<div id="dropDownSelect1"></div>
-	
+	<script>
+		AOS.init({
+		duration: 1500,
+		}); 
+		  function onClick(e) {e.preventDefault();grecaptcha.ready(function() {grecaptcha.execute('6Le1FKsZAAAAAG5iOWZwMB4KQXLFtUbonm55oxfC', {action: 'submit'}).then(function(token) {console.log(token);});});}
+	  </script>
 	<script>
    function Login(form) {
 username = new Array("Abenezer");
