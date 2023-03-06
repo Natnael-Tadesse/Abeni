@@ -1,82 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V16</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
-</head>
+<title>Abenezer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="markup.css">
+<link rel="stylesheet" href="markup2.css">
+	<link rel="stylesheet" href="css/font.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head> 
 <body>
-	
-	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-			<div class="wrap-login100 p-t-30 p-b-50">
-				<span class="login100-form-title p-b-41">
-					Account Login
-				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5">
 
-					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="User name">
-						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
-					</div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b >Manchister<br>United.</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Players</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">History</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Managers</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Status</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
-					</div>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Manchister United FC.</span>
+</header>
 
-					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-				</form>
-			</div>
-		</div>
-	</div>
-	
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-	<div id="dropDownSelect1"></div>
-	
-<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Manchester United FC.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Players.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="images/casimiro.jpg" style="width:100%" onclick="onClick(this)" alt="Carlos Henrique Casimiro, known as Casemiro, is
+       a Brazilian professional footballer who plays as a defensive midfielder for Premier League club 
+      Manchester United and the Brazil national team. He is regarded as one of the best defensive midfielders of his generation">
+      <img src="images/erki.jpg" style="width:100%" onclick="onClick(this)" alt="Marcel Sabitzer is an Austrian professional footballer
+       who plays as a midfielder 
+      for Premier League club Manchester United, on loan from Bayern Munich. He represents the Austria national team.">
+      <img src="images/sancho.jpg" style="width:100%" onclick="onClick(this)" alt="Jadon Malik Sancho is an English professional footballer
+       who plays as a winger for Premier League club Manchester United and the England national team. Considered 
+      one of the best young players in the world, he is known for his trickery, game intelligence and use of feints in one-on-one situations">
+      <img src="images/rashford.jpg" style="width:100%" onclick="onClick(this)" alt="Marcus Rashford MBE is an English professional footballer
+       who plays as a forward for Premier League club Manchester United and the England national team.
+       Considered one of the best forwards in the world, he is known for his attacking, dribbling, composure, and athleticism.">
+       <img src="images/tony.jpg" style="width:100%" onclick="onClick(this)" alt="Antony Matheus dos Santos, simply known as Antony, 
+       is a Brazilian professional footballer who plays as a winger for Premier League club 
+       Manchester United and the Brazil national team. Antony graduated from the São Paulo academy and made his senior debut for the
+        club in 2018..">
+    </div>
+
+    <div class="w3-half">
+      <img src="images/Garnacho.jpg" style="width:100%" onclick="onClick(this)" alt="Alejandro Garnacho Ferreyra is a professional 
+      footballer who plays as a winger for Premier League club Manchester United. Garnacho joined United's 
+      youth system from Atlético Madrid in October 2020. He won the FA Youth Cup and the Jimmy Murphy Young Player of
+       the Year award in May 2022.">
+      <img src="images/martial.jpg" style="width:100%" onclick="onClick(this)" alt="Anthony Jordan Martial is a French professional 
+      footballer who plays as a forward for Premier League club Manchester United and the France national team. After playing 
+      youth football for Les Ulis, Martial began his professional career at Lyon, before transferring to AS Monaco in 2013 for a
+       fee of €6 million.">
+      <img src="images/martinez.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+      <img src="images/devid.jpg" style="width:100%" onclick="onClick(this)" alt="David de Gea Quintana is a Spanish professional footballer
+       who plays as a goalkeeper
+       for Premier League club Manchester United and the Spain national team. He is widely regarded as one of the best goalkeepers in the world. ">
+    </div>
+   
+    
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>History</b></h1>
+
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p style="font-size: 25px;">"About Manchster United"</p>
+    <div class="container">
+      <div class="image">
+        <img src="images/logo2.jpg" onclick="onClick(this)">
+      </div>
+      <div class="text">
+        <p style="font-size: 20px">Founded in 1878 as newton heath l&yr football club, our club has operated for over 140 years. The team first entered the english first
+          Division, then the highest league in english football, for the start of the 1892-93 season. Our club name 
+         Changed to manchester united football club in 1902, and we won the first of our 20 english league titles in 1908. In 1910, 
+         We moved to old trafford, our current stadium.</p>
+      </div>
+    </div>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p style="font-size: 25px;" >"About Old Trafford stadium"</p>
+    <div class="container">
+      <div class="text">
+        <p style="font-size: 20px;">Old Trafford stadium, commonly known as "The Theatre of Dreams," was originally opened on February 19, 1910 
+          with a capacity of approximately 80,000. During the Second World War, Old Trafford was used by the military as a 
+          depot, and on March 11, 1941 was heavily damaged by a German bombing raid. The stadium was rebuilt following the war
+           and reopened on August 24, 1949.</p>
+      </div>
+      <div class="image">
+        <img src="images/old.jpg" onclick="onClick(this)">
+      </div>
+    
+    </div>
+
+    
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Managers</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The best team in the world.</p>
+    <p>Manchester United Football Club is a professional football club based in Old Trafford, Greater Manchester, 
+      England. The club was formed in Newton Heath in 1878 as Newton Heath LYR F.C., and played their first competitive 
+      match in October 1886, when they entered the 
+      First Round of the 1886–87 FA Cup. The club was renamed Manchester United F.C. in 1902, and moved to Old Trafford in 1910.
+    </p>
+    <p><b>Best Managers of Manchester United FC</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/eric2.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Erik ten Hag </h3>
+          <p class="w3-opacity">Manager</p>
+          <p>Erik ten Hag is a Dutch professional football coach and former player who is currently the manager 
+            of Premier League club Manchester United. Ten Hag played as a central defender 
+            and began his career with Eredivisie club Twente; he joined De Graafschap in 1990, and won the Eerste
+             Divisie in his first season</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/Ralf.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Ralf Rangnick</h3>
+          <p class="w3-opacity">Previous Manager </p>
+          <p>Ralf Rangnick is a German professional football coach, executive and former player who is currently 
+            the manager of the Austria national team. Rangnick began his coaching career in 1983, succeeding his career 
+            as a player, at age 25.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images/alex.png" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Sir Alexander Ferguson</h3>
+          <p class="w3-opacity">Former Football Manager </p>
+          <p>Sir Alexander Chapman Ferguson CBE (born 31 December 1941) is a Scottish former football manager and player, best
+             known for managing Manchester United from 1986 to 2013. He is widely regarded as one of the greatest managers of 
+             all time and has won more trophies than any other manager in the history of football.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Status</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Manchester United were finding it tough against West Ham in the FA Cup on Wednesday, but they changed the game when they brought 
+      on Casemiro and Marcus Rashford, and went up through the gears.</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center" >
+        <li class="w3-green w3-xlarge w3-padding-32"> Attack </li>
+        <li class="w3-padding-16">
+          <h2>Goals</h2>
+          <span class="w3-opacity" style="margin-left: 300px;">2,226</span>
+        </li>
+        <li class="w3-padding-16">
+          <h2>Goals per match</h2>
+          <span class="w3-opacity" style="margin-left: 300px;">1.89</span>
+        </li>
+        <li class="w3-padding-16">
+          <h2>Shots</h2>
+          <span class="w3-opacity" style="margin-left: 300px;">9,676</span>
+        </li>
+        <li class="w3-padding-16">
+          <h2>Shots on target</h2>
+          <span class="w3-opacity" style="margin-left: 300px;">3,511</span>
+        </li>
+  
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-container w3-red w3-xlarge w3-padding-32"> Team Play </li>
+        <li class="w3-padding-16">
+          <h2>Passes</h2>
+          <span class="w3-opacity" style="margin-left: 300px;">326,536</span>
+        </li>
+        <li class="w3-padding-16">
+          <h2>Passes per match</h2>
+          <span class="w3-opacity" style="margin-left: 300px;">277.43</span>
+        </li>
+        <li class="w3-padding-16">
+          <h2>Pass accuracy %</h2>
+          <span class="w3-opacity" style="margin-left: 300px;">83%</span>
+        </li>
+        <li class="w3-padding-16">
+          <h2>Crosses</h2>
+          <span class="w3-opacity" style="margin-left: 300px;">14,276</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <section class="ftco-section">
+      <div class="container">
+     
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="wrapper">
+              <div class="row mb-5">
+                <div class="col-md-3">
+                  <div class="dbox w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-map-marker"></span>
+                    </div>
+                    <div class="text">
+                      <p><span>Address:</span> Addis Ababa, Nifasi silk Lafto</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dbox w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-phone"></span>
+                    </div>
+                    <div class="text">
+                      <p><span>Phone:</span> <a href="tel://1234567920">+251 92 034 6668</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dbox w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-paper-plane"></span>
+                    </div>
+                    <div class="text">
+                      <p><span>Email:</span> <a href="mailto:natitadie@gmail.com">abenezer.tamiru@gmail.com</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="dbox w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-globe"></span>
+                    </div>
+                    <div class="text">
+                      <p><span>Website</span> <a href="#">abeni.com</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-md-7">
+                  <div class="contact-wrap w-100 p-md-5 p-4">
+                    <h3 class="mb-4">Contact Us</h3>
+                    <div id="form-message-warning" class="mb-4"></div> 
+                    <div id="form-message-success" class="mb-4">
+                      Your message was sent, thank you!
+                    </div>
+                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="label" for="name">Full Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                          </div>
+                        </div>
+                        <div class="col-md-6"> 
+                          <div class="form-group">
+                            <label class="label" for="email">Email Address</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="subject">Subject</label>
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="#">Message</label>
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary">
+                            <div class="submitting"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-5 d-flex align-items-stretch">
+                  <div class="info-wrap w-100 p-5 img" style="background-image: url(images/aben.jpg);">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Abenezer Tamiru </p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/main.js"></script>
+
 
 </body>
 </html>
